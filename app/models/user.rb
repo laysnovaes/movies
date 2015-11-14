@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   has_many :votes
 
+  ratyrate_rater
+
   def set_default_role
     self.role ||= :user
   end

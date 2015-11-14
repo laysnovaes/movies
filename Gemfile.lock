@@ -220,6 +220,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.2)
+    ratyrate (1.2.2.alpha)
     rb-fchange (0.0.6)
       ffi
     rb-fsevent (0.9.6)
@@ -350,6 +351,7 @@ DEPENDENCIES
   rails (= 4.2.4)
   rails_12factor
   rails_layout
+  ratyrate
   rb-fchange
   rb-fsevent
   rb-inotify

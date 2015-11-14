@@ -5,6 +5,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>Rating</th>
       <th>Name</th>
       <th>Year</th>
       <th>Genre</th>
@@ -16,7 +17,8 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-         <td><%= link_to movie.name, movie %></td>
+          <td><%= rating_for movie, "stars" %></td>
+          <td><%= link_to movie.name, movie %></td>
           <td><%= movie.year %></td>
           <td><button type="button" class="btn btn-default"><%= link_to movie.genre.name, movie.genre %></button></td>
           <td><%= movie.description %></td>

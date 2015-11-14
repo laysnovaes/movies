@@ -22,6 +22,7 @@ gem 'pundit'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 gem 'upmin-admin'
+gem 'ratyrate'
 group :development do
   gem 'better_errors'
   gem 'foreman'
