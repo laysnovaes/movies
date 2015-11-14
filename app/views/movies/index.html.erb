@@ -16,13 +16,11 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-      <td>
          <td><%= movie.name %></td>
           <td><%= movie.year %></td>
           <td><button type="button" class="btn btn-default"><%= link_to movie.genre.name, movie.genre %></button></td>
           <td><%= movie.description %></td>
-          </td>
-          </tr>
+            </tr>
     <% end %>
   </tbody>
 </table>
