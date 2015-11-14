@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Movies</h1>
+<h1> Movies</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,14 +16,13 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-        <td><%= movie.name %></td>
-        <td><%= movie.year %></td>
-        <td><%= movie.genre %></td>
-        <td><%= movie.description %></td>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <td>
+         <td><%= movie.name %></td>
+          <td><%= movie.year %></td>
+          <td><button type="button" class="btn btn-default"><%= link_to movie.genre.name, movie.genre %></button></td>
+          <td><%= movie.description %></td>
+          </td>
+          </tr>
     <% end %>
   </tbody>
 </table>
@@ -31,3 +30,6 @@
 <br>
 
 <%= link_to 'New Movie', new_movie_path %>
+
+    
+          
