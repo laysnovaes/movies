@@ -12,7 +12,7 @@
 
 <p>
   <strong>Genre:</strong>
-  <%= @movie.genre %>
+  <button type="button" class="btn btn-default"><%= link_to @movie.genre.name, @movie.genre %></button>
 </p>
 
 <p>

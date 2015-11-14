@@ -5,5 +5,32 @@
   <%= @genre.name %>
 </p>
 
+<h1> Movies</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Year</th>
+      <th>Genre</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @genre.movies.each do |movie| %>
+      <tr>
+         <td><%= link_to movie.name, movie %></td>
+          <td><%= movie.year %></td>
+          <td><button type="button" class="btn btn-default"><%= link_to movie.genre.name, movie.genre %></button></td>
+          <td><%= movie.description %></td>
+            </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
 <%= link_to 'Edit', edit_genre_path(@genre) %> |
 <%= link_to 'Back', genres_path %>
