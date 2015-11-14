@@ -5,7 +5,7 @@
   <%= @movie.name %>
 </p>
 
-<%= rating_for @movie, "stars" %>
+<%= rating_for @movie, "stars", star_path: '/images' %>
 
 <p>
   <strong>Year:</strong>

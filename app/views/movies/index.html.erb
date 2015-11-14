@@ -17,7 +17,7 @@
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
-          <td><%= rating_for movie, "stars" %></td>
+          <td><%= rating_for movie, "stars", star_path: '/images' %></td>
           <td><%= link_to movie.name, movie %></td>
           <td><%= movie.year %></td>
           <td><button type="button" class="btn btn-default"><%= link_to movie.genre.name, movie.genre %></button></td>
